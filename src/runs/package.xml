@@ -1,1 +1,21 @@
+<package format="2">
+  <name>runs</name>
+  <version>0.0.0</version>
+  <description>ROS2 package for self-driving car</description>
+  <maintainer email="eng23ra0065@gmail.com">R.u.n.s</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_python</buildtool_depend>
+  <depend>rclpy</depend>
+  <depend>sensor_msgs</depend>
+  <depend>std_msgs</depend>
+  <depend>gpiozero</depend> <!-- Add this line for GPIO dependency -->
+
+  <exec_depend>ros2launch</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
 

@@ -3,7 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from gpiozero import Motor, RotaryEncoder
 
-class MotorControlNode(Node):
+class MotorControl(Node):
     def __init__(self):
         super().__init__('motor_control')
 

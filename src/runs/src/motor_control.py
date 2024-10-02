@@ -5,7 +5,7 @@ from gpiozero import Motor, RotaryEncoder
 
 class MotorControlNode(Node):
     def __init__(self):
-        super().__init__('motor_control_node')
+        super().__init__('motor_control')
 
         # Set up the subscriber for cmd_vel (to receive velocity commands)
         self.subscription = self.create_subscription(Twist, 'cmd_vel', self.cmd_vel_callback, 10)
@@ -67,13 +67,13 @@ def main(args=None):
     rclpy.init(args=args)
 
     # Create the motor control node
-    motor_control_node = MotorControlNode()
+    motor_control = MotorControl()
 
     # Spin the node to keep the program alive and responsive to callbacks
-    rclpy.spin(motor_control_node)
+    rclpy.spin(motor_control)
 
     # Cleanup and shutdown
-    motor_control_node.destroy_node()
+    motor_control.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':

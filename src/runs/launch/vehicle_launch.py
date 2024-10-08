@@ -13,7 +13,7 @@ def generate_launch_description():
         Node(
             package='runs',
             executable='motor_control',
-            name='motor_control_node',
+            name='motor_control',
             output='screen'
         ),
         Node(

@@ -22,7 +22,7 @@ setup(
         'console_scripts': [
             'camera_node = runs.camera_node:main',
             'lidar_node = runs.lidar_node:main',
-            'motor_control_node = runs.motor_control_node:main',
+            'motor_control= runs.motor_control:main',
         ],
     },
 )

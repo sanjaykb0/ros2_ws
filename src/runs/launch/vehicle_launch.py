@@ -6,14 +6,14 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='runs',
-            executable='lidar_node',
-            name='lidar_node',
+            executable='motor_control',
+            name='motor_control',
             output='screen'
         ),
         Node(
             package='runs',
-            executable='motor_control',
-            name='motor_control',
+            executable='lidar_node',
+            name='lidar_node',
             output='screen'
         ),
         Node(
